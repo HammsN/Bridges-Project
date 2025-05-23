@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+.base{
+    background-color: blanchedalmond;
+    height: 5000px;
+    font-family: 'Playfair Display';
+}
+
+a {
+text-decoration: none;
+}
+
+.selected{
+    background-color:rgba(105, 24, 24, 0.781); 
+}
+
+
+.body-text{
+    font-size: 23px; 
+    font-family: Poppins; 
+    user-select: none;
+}
+
+.underline{
+    width: 30%;
+    height: 4px; 
+    background-color: black; 
+    display: flex;
+    justify-self: center;
+    margin-right: 3em;
+    margin-bottom: 1.5em; 
+}
+
+
+.btn-active{
+    background-color: rgb(15, 58, 122);
+}
+
+button{
+    transform: scale(1);
+    transition: transform 0.25s ease-in, background-color 0.25s ease-out;
+}
+
+button:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+    background-color: rgb(196, 193, 193);
+}
+
+.title{
+    top: 15vh;
+    left: 48vh;
+    position: absolute;
+    text-wrap: nowrap;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.hover-animation{
+    display: inline-block;
+    background-color:rgba(105, 24, 24, 0.781) ;
+    transition: padding-right 0.32s ease-in, transform 0.3s ease-in-out;
+    padding-right: 0;
+
+}
+
+.hover-animation:hover{
+    padding-right: 5em; 
+    transition: padding-right 0.32s ease-out, transform 0.2s ease-in;
+    transform: scale(1.1);
+}
+
+.slide{
+    top: 0;
+    z-index: -1;
+}
+
+
+/* container -----------------------------------*/
+.container-fluid{
+    border-top: 7px solid black;
+
+    justify-content: center;
+    display: flex;
+}
+
+
+.container-md{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    padding: auto   ;
+}
+
+
+/* carousel -----------------------------------*/
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    width: 100%;
+    filter: brightness(90%);   
+    height: 50em;
+    object-fit: cover;     
+}
+
+/* navbar -----------------------------------*/
+.navbar,
+.navbar-collapse,
+.navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+}
+
+.navbar {
+    width: 15vw;
+    height: 100vh;
+    align-items: flex-start;
+    position: fixed;
+    background-color:brown; 
+    left: 0;
+    border-right: 16px solid rgba(105, 24, 24, 0.781) ;
+    border-left: 16px solid rgba(105, 24, 24, 0.781) ;
+    border-bottom: 8px dotted rgba(105, 24, 24, 0.781);
+}
+
+.navbar-item{
+    padding-bottom: 15px;
+}
+
+.navbar-brand {
+    margin-left: 0.5em;
+    padding-bottom: 0;
+    border-bottom: 4px solid #002cf1;
+    margin-bottom: 0.8em;
+}
+
+ul li{
+    list-style-type: none;
+}
