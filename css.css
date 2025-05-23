@@ -7,9 +7,6 @@
     overflow-x: hidden;
 }
 
-* {
-   
-}
 
 a {
     text-decoration: none;
@@ -27,13 +24,11 @@ a {
 }
 
 .underline{
-    width: 30%;
+    width: 5em;
     height: 4px; 
     background-color: black; 
     display: flex;
-    justify-self: center;
-    margin-right: 3em;
-    margin-bottom: 1.5em; 
+    margin-bottom: 1em; 
 }
 
 
@@ -57,9 +52,9 @@ button:hover{
 }
 
 .left-offset{
-    margin-left: 20em;
+    margin-left: 15vw;
+    padding: 2em;
 }
-
 
 .hover-animation{
     display: inline-block;
@@ -98,7 +93,8 @@ section .card{
 }
 
 .large-iconic-bridges{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -206,7 +202,7 @@ ul li{
     }
 
     .left-offset{
-        margin-left: 2em !important; 
+        margin-left: 0 !important; 
     }
 
     .d-flex{
@@ -220,6 +216,11 @@ ul li{
 
     .large-iconic-bridges{
         display: none;
+        flex-direction: none;
     }
 
+    .underline{
+        align-self: center !important;
+        justify-self: center !important;
+    }
 }
