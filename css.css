@@ -76,11 +76,16 @@ button:hover{
     z-index: -1;
 }
 
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* container -----------------------------------*/
 .container-fluid{
     border-top: 7px solid black;
-
     justify-content: center;
     display: flex;
 }
@@ -92,7 +97,7 @@ button:hover{
     display: flex;
     background-color: blue;
     width: 100%;
-    padding: auto   ;
+    padding: auto;
 }
 
 
