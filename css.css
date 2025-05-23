@@ -4,6 +4,11 @@
     background-color: blanchedalmond;
     height: 5000px;
     font-family: 'Playfair Display';
+    overflow-x: hidden;
+}
+
+* {
+   
 }
 
 a {
@@ -47,14 +52,6 @@ button:hover{
     background-color: rgb(196, 193, 193);
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    text-wrap: nowrap;
-    font-size: 60px;
-    align-items: center;
-}
-
 .main-content{
     margin-left: 8vw;
 }
@@ -64,7 +61,6 @@ button:hover{
     display: inline-block;
     background-color:rgba(105, 24, 24, 0.781) ;
     transition: padding-right 0.32s ease-in, transform 0.3s ease-in-out;
-    padding-right: 0;
 
 }
 
@@ -90,6 +86,8 @@ section .card{
     border: 2px solid black;
 }
 
+
+
 /* container -----------------------------------*/
 .container-fluid{
     border-top: 7px solid black;
@@ -98,14 +96,6 @@ section .card{
 }
 
 
-.container-md{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: blue;
-    width: 100%;
-    padding: auto;
-}
 
 
 /* carousel -----------------------------------*/
@@ -121,9 +111,6 @@ section .card{
 .carousel-caption{
     top: 50%;
     transform: translateY(-50%);
-    pointer-events:all;
-    z-index: 5;
-    position: absolute;
 }
 
 /* navbar -----------------------------------*/
@@ -152,7 +139,7 @@ section .card{
 .navbar-brand {
     margin-left: 0.5em;
     padding-bottom: 0;
-    border-bottom: 4px solid #002cf1;
+    border-bottom: 4px solid rgba(105, 24, 24, 0.781);
     margin-bottom: 2em;
 }
 
@@ -160,20 +147,48 @@ ul li{
     list-style-type: none;
 }
 
-@media (max-width: 992px)
+.navbar-toggler:focus,
+.navbar-toggler:hover,
+.navbar-toggler-icon:focus,
+.navbar-toggler-icon:hover{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+@media (max-width: 1010px)
 {
     .sidebar-navbar{
         width: 100%;
         height: auto;
         border-bottom: 8px solid rgba(105, 24, 24, 0.781);
+        flex-direction: row;
+        padding: 1em;
     }
 
     .main-content{
-        margin-left: auto;
+        margin-left: -5vw;
     }
 
+    .navbar-item {
+        width: 100%;
+        text-align: end;
+    }
 
+    .navbar-brand{
+        border-bottom: none;
+        width: 5px;
+    }
 
+    .navbar,
+    .navbar-collapse,
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
 
+    a img{
+        width: 100px;
+        height: 100px;
+    }
 
 }
