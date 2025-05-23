@@ -7,7 +7,7 @@
 }
 
 a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .selected{
@@ -48,12 +48,15 @@ button:hover{
 }
 
 .title{
-    top: 15vh;
-    left: 48vh;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     text-wrap: nowrap;
     font-size: 60px;
-    text-align: center;
+    align-items: center;
+}
+
+.main-content{
+    margin-left: 8vw;
 }
 
 
@@ -82,6 +85,10 @@ button:hover{
     justify-content: center;
 }
 
+section .card{
+    border-radius: 0;
+    border: 2px solid black;
+}
 
 /* container -----------------------------------*/
 .container-fluid{
@@ -102,13 +109,21 @@ button:hover{
 
 
 /* carousel -----------------------------------*/
-.carousel-inner,
 .carousel-item,
 .carousel-item img {
     width: 100%;
     filter: brightness(90%);   
     height: 50em;
-    object-fit: cover;     
+    object-fit: cover; 
+    
+}
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events:all;
+    z-index: 5;
+    position: absolute;
 }
 
 /* navbar -----------------------------------*/
@@ -118,16 +133,16 @@ button:hover{
     flex-direction: column;
 }
 
-.navbar {
+.sidebar-navbar {
     width: 15vw;
     height: 100vh;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     background-color:brown; 
-    left: 0;
     border-right: 16px solid rgba(105, 24, 24, 0.781) ;
     border-left: 16px solid rgba(105, 24, 24, 0.781) ;
     border-bottom: 8px dotted rgba(105, 24, 24, 0.781);
+    flex-direction: column;
 }
 
 .navbar-item{
@@ -138,9 +153,27 @@ button:hover{
     margin-left: 0.5em;
     padding-bottom: 0;
     border-bottom: 4px solid #002cf1;
-    margin-bottom: 0.8em;
+    margin-bottom: 2em;
 }
 
 ul li{
     list-style-type: none;
+}
+
+@media (max-width: 992px)
+{
+    .sidebar-navbar{
+        width: 100%;
+        height: auto;
+        border-bottom: 8px solid rgba(105, 24, 24, 0.781);
+    }
+
+    .main-content{
+        margin-left: auto;
+    }
+
+
+
+
+
 }
