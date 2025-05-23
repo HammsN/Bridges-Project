@@ -56,6 +56,10 @@ button:hover{
     margin-left: 8vw;
 }
 
+.left-offset{
+    margin-left: 20em;
+}
+
 
 .hover-animation{
     display: inline-block;
@@ -79,6 +83,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 section .card{
@@ -86,6 +91,15 @@ section .card{
     border: 2px solid black;
 }
 
+
+
+.small-iconic-bridges{
+    display: none;
+}
+
+.large-iconic-bridges{
+    display: block;
+}
 
 
 /* container -----------------------------------*/
@@ -189,6 +203,23 @@ ul li{
     a img{
         width: 100px;
         height: 100px;
+    }
+
+    .left-offset{
+        margin-left: 2em !important; 
+    }
+
+    .d-flex{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .small-iconic-bridges{
+        display: block;
+    }
+
+    .large-iconic-bridges{
+        display: none;
     }
 
 }
