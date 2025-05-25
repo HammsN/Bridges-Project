@@ -2,7 +2,6 @@
 
 .base{
     background-color: blanchedalmond;
-    height: 5000px;
     font-family: 'Playfair Display';
     overflow-x: hidden;
 }
@@ -86,6 +85,10 @@ section .card{
 }
 
 
+
+.footer{
+    border-top: 7px solid black;
+}
 
 .small-iconic-bridges{
     display: none;
@@ -221,5 +224,9 @@ ul li{
     .underline{
         align-self: center !important;
         justify-self: center !important;
+    }
+
+    .contact{
+        padding-top: 2em;
     }
 }
