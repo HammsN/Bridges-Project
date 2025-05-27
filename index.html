@@ -442,14 +442,42 @@
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
             const day = date.toLocaleDateString(undefined, options);
             const time = date.toLocaleTimeString();
-            document.getElementById('time').innerHTML=
-                `Today is: ${day}, Time: ${time}`;
+
+            function success(position)
+            {
+                const location = "Latitude: " + position.coords.latitude +
+                "  Longitude: " + position.coords.longitude;
+
+                
+                document.getElementById("time").innerHTML=
+                    `Today is: ${day}, Time: ${time}, Location: ${location} `;
+            }
+
+            function error()
+            {
+                document.getElementById("time").innerHTML =
+                    `Today is: ${day}, Time: ${time}, Location: Unable to get location`;
+           
+            }
+
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(success,error);
+            }
+            else
+            {
+                document.getElementById("time").innerHTML =
+                `Today is: ${day}, Time: ${time}, Location: Geolocation unsupported `;
+            }
+
         }
 
         setInterval(updateTime, 1000);
         updateTime();
 
 
+
+        
         var visitCount = localStorage.getItem("page_view");
 
         if (visitCount)
