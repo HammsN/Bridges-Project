@@ -143,6 +143,12 @@ section .card{
     transform: translateY(-50%);
 }
 
+.visitor-count{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+
 /* navbar -----------------------------------*/
 .navbar,
 .navbar-collapse,
@@ -188,6 +194,7 @@ ul li{
 
 @media (max-width: 1010px)
 {
+
     .sidebar-navbar{
         width: 100%;
         height: auto;
@@ -195,6 +202,14 @@ ul li{
         flex-direction: row;
         padding: 1em;
     }
+
+
+    .visitor-count{
+        display: block;
+        text-align: right;
+        margin-top: 7em;
+    }
+
 
     .main-content{
         margin-left: -5vw;
