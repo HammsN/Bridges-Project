@@ -56,16 +56,32 @@ button:hover{
 
 .hover-animation{
     display: inline-block;
-    background-color:rgba(105, 24, 24, 0.781) ;
-    transition: padding-right 0.32s ease-in, transform 0.3s ease-in-out;
-
+    color: white;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-out;
 }
 
 .hover-animation:hover{
-    padding-right: 5em; 
-    transition: padding-right 0.32s ease-out, transform 0.2s ease-in;
-    transform: scale(1.1);
+    color: orange;
+    transform: translateX(15px);
 }
+
+.hover-animation::after{
+    content:'';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.hover-animation:hover::after{
+    transform: scaleX(1);
+}
+
 
 .slide{
     top: 0;
@@ -102,7 +118,6 @@ section .card{
 
 .marquee-content {
     white-space: nowrap;
-
     display: inline-block;
     padding-left: 100%;
     animation: marquee 20s linear infinite;
@@ -113,7 +128,7 @@ section .card{
         transform: translate(0,0);
     }
     100%{
-        transform: translate(-100%,0);
+        transform: translate(-80%,0);
     }
 }
 
@@ -150,22 +165,18 @@ section .card{
 }
 
 /* navbar -----------------------------------*/
-.navbar,
-.navbar-collapse,
-.navbar-expand-lg .navbar-nav {
-    flex-direction: column;
-}
 
 .sidebar-navbar {
     width: 15vw;
     height: 100vh;
     align-items: center;
     position: fixed;
+    display: flex;
     background-color:brown; 
+    flex-direction: column;
     border-right: 16px solid rgba(105, 24, 24, 0.781) ;
     border-left: 16px solid rgba(105, 24, 24, 0.781) ;
     border-bottom: 8px dotted rgba(105, 24, 24, 0.781);
-    flex-direction: column;
 }
 
 .navbar-item{
