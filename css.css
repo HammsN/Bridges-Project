@@ -10,11 +10,6 @@ a {
     text-decoration: none;
 }
 
-.selected{
-    background-color:rgba(105, 24, 24, 0.781); 
-}
-
-
 .body-text{
     font-size: 23px; 
     font-family: Poppins; 
@@ -29,6 +24,10 @@ a {
     margin-bottom: 1em; 
 }
 
+
+.poppins{
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
 
 .btn-active{
     background-color: rgb(15, 58, 122);
@@ -54,10 +53,29 @@ button:hover{
     padding: 2em;
 }
 
-.hover-animation{
+.selected{
+    color: orange !important;
+    transform: translateX(15px);
+    font-weight: bold;
+    font-size: 28px !important;
+}
+
+
+.footer-animation{
     display: inline-block;
     color: white;
     transition: color 0.2s ease-in-out, transform 0.3s ease-out;
+}
+
+.footer-animation:hover{
+    color: orange;
+    transform: translateY(-5px);
+}
+
+.hover-animation{
+    display: inline-block;
+    color: white;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-out, font-size 0.2s ease-in;
 }
 
 .hover-animation:hover{
@@ -77,6 +95,7 @@ button:hover{
     transform-origin: left;
     transition: transform 0.3s ease;
 }
+
 
 .hover-animation:hover::after{
     transform: scaleX(1);
@@ -102,19 +121,19 @@ section .card{
 
 
 
+.underline-right{
+    justify-self: right;
+}
+
 .footer{
     border-top: 7px solid black;
 }
 
-.small-iconic-bridges{
-    display: none;
-}
-
-.large-iconic-bridges{
+.iconic-bridges{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    text-align: end;
 }
-
 
 .marquee-content {
     white-space: nowrap;
@@ -132,6 +151,23 @@ section .card{
     }
 }
 
+
+
+.image-wrapper{
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+}
+
+.image-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* container -----------------------------------*/
 .container-fluid{
@@ -179,8 +215,17 @@ section .card{
     border-bottom: 8px dotted rgba(105, 24, 24, 0.781);
 }
 
+.navbar-nav{
+    border-bottom: 4px solid rgba(105, 24, 24, 0.781);
+    padding-bottom: 40px;
+}
+
 .navbar-item{
-    padding-bottom: 15px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: rgba(105, 24, 24, 0.781);
+    padding-left: 1em;
+    padding-right: 1.5em;
 }
 
 .navbar-brand {
@@ -240,6 +285,8 @@ ul li{
     .navbar-collapse,
     .navbar-expand-lg .navbar-nav {
         flex-direction: row;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     a img{
@@ -256,13 +303,10 @@ ul li{
         text-align: center;
     }
 
-    .small-iconic-bridges{
+    .iconic-bridges{
         display: block;
-    }
-
-    .large-iconic-bridges{
-        display: none;
-        flex-direction: none;
+        flex-direction: column;
+        text-align: center;
     }
 
     .underline{

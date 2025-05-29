@@ -1,0 +1,27 @@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute("id");
+                    const navLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove("selected"));
+                        if (navLink) navLink.classList.add("selected");
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: "0px 0px -60% 0px", // Trigger when section is ~40% in viewport
+                threshold: 0.4
+            }
+        );
+
+        sections.forEach(section => observer.observe(section));
+    });
+</script>
