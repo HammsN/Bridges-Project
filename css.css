@@ -112,14 +112,17 @@ button:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in{
+    opacity: 1 !important;
 }
 
 section .card{
     border-radius: 0;
     border: 2px solid black;
 }
-
-
 
 .underline-right{
     justify-self: right;
@@ -157,6 +160,7 @@ section .card{
     position: relative;
     width: 100%;
     padding-top: 75%;
+    min-height: 340px;
     overflow: hidden;
 }
 
