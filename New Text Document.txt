@@ -25,3 +25,22 @@
         sections.forEach(section => observer.observe(section));
     });
 </script>
+
+const container = document.getElementById("bridgeContainer");
+
+bridgeData.forEach(({ title, region, image }) => {
+  const card = document.createElement("div");
+  card.className = "card m-2";
+  card.setAttribute("data-region", region);
+  card.innerHTML = `
+    <div class="image-wrapper">
+      <img src="${image}" alt="Bridge" class="card-img-top">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">${title}</h5>
+      <p class="card-text">Formus Lorem Ipsum Bidaciousness. Make up the bulk NOW.</p>
+      <a href="#" class="btn btn-link">Read more</a>
+    </div>
+  `;
+  container.appendChild(card);
+});

@@ -102,6 +102,11 @@ button:hover{
 }
 
 
+
+.width-fix{
+    max-width: 300px;
+}
+
 .slide{
     top: 0;
     z-index: -1;
@@ -320,5 +325,9 @@ ul li{
 
     .contact{
         padding-top: 2em;
+    }
+
+    .width-fix{
+        max-width: none;
     }
 }
