@@ -181,51 +181,67 @@
         <div class="row justify-content-center left-offset">    
   
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Capilano.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Capilano Suspension Bridge", Canada</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Eshima.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Eshima Ohashi Bridge", Japan</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Frias.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Octávio Frias de Oliveira Bridge", Brazil</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Kazungula.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Kazungula Bridge", Botswana</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/LivingRoot.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Living Root Bridge", India</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Khaju Bridge.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Khaju Bridge", Iran</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/MosesBridge.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Moses Bridge", Netherlands</p>
                 </div>
             </div>
              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card m-2">
-                    <img src="images/PonteVecchio.webp" alt="Ponte" class="card-img-top">
-                    <p class="card-text">Hello.</p>
+                <div class="card m-2 bg-dark bg-gradient text-white">
+                    <div class="image-wrapper">
+                    <img src="images/gallery/Rakotzbrucke.webp" alt="Bridge" class="card-img-top">
+                    </div>
+                    <p class="card-text">"Rakotzbrücke", Germany</p>
                 </div>
             </div>
         </div>  
@@ -255,7 +271,7 @@
                 <h5 class="form-label">Feedback</h5>
                 <textarea class="form-control" id="formTextArea" rows="3" style="border-bottom: 3px solid black"></textarea>
 
-                <button class="btn bg-dark bg-gradient text-white my-3">Submit</button>
+                <button class="btn bg-dark bg-gradient text-white my-3" type="submit">Submit</button>
 
                 <div style="height: 1rem;" class="mb-4"></div>
             </div>
@@ -623,7 +639,7 @@
 
 
         {
-            title: "Tappan Zee Bridge (Governor Mario M. Cuomo Bridge)",
+            title: "Tappan Zee Bridge",
             text: "A modern twin-span bridge over the Hudson River in New York, replacing the original Tappan Zee Bridge.",
             region: "NA",
             image: "images/TappanZee.webp"
@@ -743,6 +759,9 @@
             filterButtons.forEach(button => {
                 button.addEventListener("click", () => {
                     const selectedRegion = button.getAttribute("data-region");
+                    
+                    filterButtons.forEach(btn => btn.classList.remove("btn-active"));
+                    button.classList.add("btn-active");
 
                     cards.forEach(card => {
                         const cardRegion = card.getAttribute("data-region");
@@ -764,11 +783,11 @@
                 })
             })
 
-        
         const defaultButton = document.getElementById("defaultBtn")
         if (defaultButton) {
             defaultButton.click();
         }
+
         });
 
 
