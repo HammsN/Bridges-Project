@@ -49,6 +49,13 @@ button:hover{
     background-color: rgb(196, 193, 193);
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
 .main-content{
     margin-left: 8vw;
 }
@@ -243,11 +250,11 @@ section .card{
 }
 
 .navbar-item{
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding: 1vw;
     background-color: rgba(105, 24, 24, 0.781);
-    padding-left: 1em;
-    padding-right: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 0.8vw;
+
 }
 
 .navbar-brand {
@@ -290,7 +297,7 @@ ul li{
 
 
     .main-content{
-        margin-left: -5vw;
+        margin-left: 0;
     }
 
     .navbar-item {
