@@ -25,6 +25,12 @@ a {
 }
 
 
+.ad-icon{
+    background-color: #0cb7da;
+    border: solid 12px #0cb7da;
+    border-radius: 3em;
+}
+
 .poppins{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
