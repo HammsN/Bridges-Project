@@ -123,7 +123,15 @@ section img{
 }
 
 
+.flight-radius{
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;
+}
 
+.bus-radius{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
 
 .width-fix{
     max-width: 300px;
@@ -350,4 +358,14 @@ ul li{
     .width-fix{
         max-width: none;
     }
-}
+
+    .bus-radius,
+    .flight-radius{
+        border-radius: 25px;
+    }
+
+    .feedback-radius{
+        border-radius: 25px;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
