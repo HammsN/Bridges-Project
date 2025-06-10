@@ -194,6 +194,7 @@ section .card{
     width: 100%;
     padding-top: 75%;
     min-height: 340px;
+    max-height: 600px;
     overflow: hidden;
 }
 
@@ -212,9 +213,6 @@ section .card{
     justify-content: center;
     display: flex;
 }
-
-
-
 
 /* carousel -----------------------------------*/
 .carousel-item,
@@ -369,3 +367,4 @@ ul li{
         margin-top: 2em;
         margin-bottom: 2em;
     }
+}
