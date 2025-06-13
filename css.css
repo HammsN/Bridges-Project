@@ -22,8 +22,13 @@ a {
     background-color: black; 
     display: flex;
     margin-bottom: 1em; 
+    justify-self: center;
+    align-self: center;
 }
 
+.section-fix{
+    margin-bottom: 70px;
+}
 
 .ad-icon{
     background-color: #0cb7da;
@@ -45,7 +50,7 @@ button{
 }
 
 button:hover{
-    transform: scale(1.09);
+    transform: scale(1.02);
     background-color: rgb(196, 193, 193);
 }
 
@@ -67,9 +72,8 @@ button:hover{
 
 .selected{
     color: orange !important;
-    transform: translateX(15px);
     font-weight: bold;
-    font-size: 28px !important;
+    font-size: 23px !important;
 }
 
 
@@ -134,12 +138,7 @@ section img{
 }
 
 .width-fix{
-    max-width: 300px;
-}
-
-.slide{
-    top: 0;
-    z-index: -1;
+    max-width: 600px;
 }
 
 .card{
@@ -148,6 +147,11 @@ section img{
     justify-content: center;
     text-align: center;
     transition: opacity 0.3s ease-in-out;
+}
+
+.card.cardS{
+    max-width: 400px;
+    flex-shrink: 0;
 }
 
 .fade-in{
@@ -189,6 +193,12 @@ section .card{
     }
 }
 
+.background-img{
+    overflow: hidden; 
+    max-height: 750px;
+    filter: brightness(60%);
+}
+
 .image-wrapper{
     position: relative;
     width: 100%;
@@ -209,20 +219,10 @@ section .card{
 
 /* container -----------------------------------*/
 .container-fluid{
-    border-top: 7px solid black;
-    justify-content: center;
     display: flex;
 }
 
 /* carousel -----------------------------------*/
-.carousel-item,
-.carousel-item img {
-    width: 100%;
-    filter: brightness(90%);   
-    height: 50em;
-    object-fit: cover; 
-    
-}
 
 .carousel-caption{
     top: 50%;
@@ -230,7 +230,7 @@ section .card{
 }
 
 .visitor-count{
-    top: 10px;
+    top: 40px;
     right: 10px;
     position: absolute;
 }
@@ -238,36 +238,25 @@ section .card{
 /* navbar -----------------------------------*/
 
 .sidebar-navbar {
-    width: 15vw;
-    height: 100vh;
-    align-items: center;
-    position: fixed;
+    height: 8em;
     display: flex;
     background-color:brown; 
-    flex-direction: column;
-    border-right: 16px solid rgba(105, 24, 24, 0.781) ;
-    border-left: 16px solid rgba(105, 24, 24, 0.781) ;
-    border-bottom: 8px dotted rgba(105, 24, 24, 0.781);
-}
-
-.navbar-nav{
-    border-bottom: 4px solid rgba(105, 24, 24, 0.781);
-    padding-bottom: 40px;
+    flex-direction: row;
+    border-bottom: 5px solid rgba(105, 24, 24, 0.781) ;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-item{
-    padding: 1vw;
-    background-color: rgba(105, 24, 24, 0.781);
+    padding: 0.8vw;
     border-radius: 10px;
-    margin-bottom: 0.8vw;
-
 }
 
 .navbar-brand {
     margin-left: 0.5em;
     padding-bottom: 0;
-    border-bottom: 4px solid rgba(105, 24, 24, 0.781);
     margin-bottom: 2em;
+    padding-right: 25em;
 }
 
 ul li{
@@ -309,11 +298,13 @@ ul li{
     .navbar-item {
         width: 100%;
         text-align: end;
+        outline: none;
     }
 
     .navbar-brand{
         border-bottom: none;
         width: 5px;
+        padding-right: 0;
     }
 
     .navbar,
@@ -366,5 +357,14 @@ ul li{
         border-radius: 25px;
         margin-top: 2em;
         margin-bottom: 2em;
+    }
+
+    .card.cardS{
+    max-width: 1000px;
+    }
+
+    .section-fix{
+    margin-bottom: 20px;
+    margin-top: 40px;
     }
 }
