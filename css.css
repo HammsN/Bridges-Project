@@ -34,9 +34,15 @@ a {
     margin-bottom: 70px;
 }
 
-.ad-icon{
+.ad-icon-lg{
     background-color: #0cb7da;
     border: solid 12px #0cb7da;
+    border-radius: 3em;
+}
+
+.ad-icon-sm{
+    background-color: #EAEBD0;
+    border: solid 4px #EAEBD0;
     border-radius: 3em;
 }
 
