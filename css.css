@@ -10,16 +10,6 @@ a {
     text-decoration: none;
 }
 
-.verdana{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.body-text{
-    font-size: 23px; 
-    font-family: Poppins; 
-    user-select: none;
-}
-
 .underline{
     width: 5em;
     height: 4px; 
@@ -69,6 +59,7 @@ button:hover{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -80%);
+  text-align: center;
 }
 
 .main-content{
@@ -297,12 +288,7 @@ ul li{
     .visitor-count{
         display: block;
         text-align: right;
-        margin-top: 7em;
-    }
-
-
-    .main-content{
-        margin-left: 0;
+        margin-top: 10em;
     }
 
     .navbar-item {
